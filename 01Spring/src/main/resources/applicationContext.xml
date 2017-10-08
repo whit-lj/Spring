@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+
+">
+    <!--HappYService对象-->
+    <bean id="service" class="cn.happy.day01.HappyService">
+        <property name="info" value="今天放假"></property>
+        <property name="age" value="12"></property>
+    </bean>
+    <bean id="ColorInk" class="cn.happy.day02.ink.ColorInk"></bean>
+    <bean id="A4Paper" class="cn.happy.day02.paper.A4Paper"></bean>
+    <bean id="printer" class="cn.happy.day02.printer.Print">
+        <property name="ink" ref="ColorInk"></property>
+        <property name="pager" ref="A4Paper"> </property>
+    </bean>
+
+
+</beans>

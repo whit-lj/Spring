@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+
+">
+    <bean id="stu" class="cn.happy.day04.Student">
+        <property name="name" value="sjjd"></property>
+        <property name="age" value="22"></property>
+    </bean>
+   <!--<bean id="stu" class="cn.happy.day04.Student">
+       <constructor-arg index="0" value="sdjsh"></constructor-arg>
+       <constructor-arg index="1" value="22"></constructor-arg>
+   </bean>-->
+   <bean id="mycollection" class="cn.happy.day04.MyCollection">
+       <property name="array">
+           <array>
+               <value>毛不易</value>
+               <value>张学友</value>
+           </array>
+       </property>
+       <property name="list">
+           <list>
+               <value>毛不易</value>
+               <value>张学友</value>
+           </list>
+       </property>
+       <property name="sett">
+           <set>
+               <value>毛不易</value>
+               <value>张学友</value>
+           </set>
+       </property>
+       <property name="map">
+           <map>
+               <entry key="001">
+                   <value>毛不易</value>
+               </entry>
+               <entry key="002">
+                   <value>张学友</value>
+               </entry>
+           </map>
+       </property>
+       <property name="properties">
+           <props>
+               <prop key="001">毛不易</prop>
+               <prop key="002">张学友</prop>
+           </props>
+       </property>
+   </bean>
+
+</beans>
